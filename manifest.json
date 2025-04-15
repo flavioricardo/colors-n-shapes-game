@@ -1,0 +1,21 @@
+{
+  "name": "Colors and Shapes Game",
+  "short_name": "Colors-n-Shapes",
+  "description": "Um jogo educativo para crianças aprenderem cores e formas geométricas",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["education", "kids", "games"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "screenshots/screenshot.png",
+      "sizes": "360x800",
+      "type": "image/png"
+    }
+  ]
+}
