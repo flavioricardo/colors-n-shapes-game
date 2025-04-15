@@ -1,12 +1,14 @@
 const CACHE_NAME = 'cores-formas-v3';
+const BASE_PATH = '/colors-n-shapes-game'; // Adicionado para GitHub Pages
+
 const ASSETS = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
-  '/sounds/ding.mp3',
-  '/sounds/error.mp3',
+  BASE_PATH + '/',
+  BASE_PATH + '/index.html',
+  BASE_PATH + '/styles.css',
+  BASE_PATH + '/script.js',
+  BASE_PATH + '/manifest.json',
+  BASE_PATH + '/sounds/ding.mp3',
+  BASE_PATH + '/sounds/error.mp3',
   'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js'
 ];
 

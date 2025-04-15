@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo de Cores e Formas</title>
     <meta name="description" content="Jogo educativo para crianças aprenderem cores e formas geométricas" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="manifest" href="./manifest.json">
+    
     <meta name="theme-color" content="#fffdf7">
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Cores & Formas">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="icons/ios/144.png">
+
+        <link rel="icon" href="./icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./icons/ios/144.png">
+    
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   </head>
   <body>
@@ -31,20 +35,20 @@
 
     <audio
       id="sound-success"
-      src="sounds/ding.mp3"
+      src="./sounds/ding.mp3"
       preload="auto"
     ></audio>
     <audio
       id="sound-error"
-      src="sounds/error.mp3"
+      src="./sounds/error.mp3"
       preload="auto"
     ></audio>
 
-    <script src="script.js" defer></script>
+    <script type="module" src="./src/script.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/serviceWorker.js')
+          navigator.serviceWorker.register('./serviceWorker.js')
             .then(registration => {
               console.log('Service Worker registrado com sucesso:', registration.scope);
             })

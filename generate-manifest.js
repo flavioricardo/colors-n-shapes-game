@@ -1,15 +1,21 @@
-const fs = require('fs');
-const path = require('path');
+import { readFileSync, writeFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const manifestPath = path.join(__dirname, 'manifest.base.json');
-const manifest = require(manifestPath);
+const manifestContent = readFileSync(manifestPath, 'utf8');
+const manifest = JSON.parse(manifestContent);
 
-const iconsPath = path.join(__dirname, 'icons/icons.json');
-const icons = require(iconsPath);
+const iconsPath = path.join(__dirname, 'public/icons/icons.json');
+const iconsContent = readFileSync(iconsPath, 'utf8');
+const icons = JSON.parse(iconsContent).icons;
 
 manifest.icons = icons;
 
-fs.writeFileSync(
+writeFileSync(
   path.join(__dirname, 'manifest.json'),
   JSON.stringify(manifest, null, 2),
   'utf8'
